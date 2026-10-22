@@ -8,7 +8,7 @@ export function HeroSlide({ onJump }) {
         <p className="text-xs font-medium uppercase tracking-[0.32em] text-gold">Aurora STEAM GT</p>
         <p className="mt-3 text-sm text-muted">Taller vivo · 35 minutos · chicas de 12 a 18 años</p>
         <h1 className="mt-5 font-display text-balance text-5xl leading-[0.95] text-champagne sm:text-6xl lg:text-7xl">
-          Creando tu primer <span className="text-foil italic">Bug</span>
+          Mi primer <span className="text-foil italic">Bug</span>
           <span className="mt-3 block text-3xl font-medium sm:text-4xl lg:text-5xl">y descubriendo tu propio camino</span>
         </h1>
         <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted">
