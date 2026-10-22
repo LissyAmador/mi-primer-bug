@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-display-family), "Space Grotesk", "Segoe UI", sans-serif;
+  --font-sans: var(--font-body-family), "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --color-night: #0d0714;
+  --color-ink: #120a1f;
+  --color-neon: #a855f7;
+  --color-pink: #ec4899;
+  --color-amber: #facc15;
+  --color-amber-deep: #f59e0b;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #0d0714;
+  color: #fff7ea;
+}
+
+body {
+  font-family: var(--font-body-family), "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: #facc15;
+  color: #0d0714;
+}
+
+:focus-visible {
+  outline: 2px solid #facc15;
+  outline-offset: 3px;
+}
+
+.text-glow {
+  text-shadow: 0 0 28px rgba(250, 204, 21, 0.45);
+}
+
+.wing-left {
+  transform-box: fill-box;
+  transform-origin: right center;
+  animation: fold-wing 3.2s ease-in-out infinite;
+}
+
+@keyframes fold-wing {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.78);
+  }
+}
+
+@keyframes hint-ring {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes speck-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-18px);
+    opacity: 1;
+  }
+}
+
+@keyframes light-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(var(--confetti-rot));
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(calc(var(--confetti-rot) + 180deg));
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
