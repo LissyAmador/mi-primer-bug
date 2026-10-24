@@ -65,7 +65,7 @@ export function AwakeningSlide() {
           </p>
         </div>
         <img
-          src="/portraits/oruga-morada.png"
+          src="/portraits/oruga-morada.png?v=3"
           alt="Oruga morada"
           className="h-[min(36vh,420px)] w-auto max-w-[42vw] shrink-0 rounded-[1.6rem] object-contain"
         />

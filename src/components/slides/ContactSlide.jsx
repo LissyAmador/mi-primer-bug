@@ -40,7 +40,10 @@ export function ContactSlide() {
       <div className="lg:col-span-2">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber">Seguimos en contacto</p>
         <h2 className="mt-3 font-display text-5xl font-bold text-white sm:text-6xl">Contáctame</h2>
-        <p className="mt-3 text-xl text-pink sm:text-2xl">Lissy Amador · EduKids</p>
+        <div className="mt-4 flex items-center gap-5">
+          <p className="text-xl text-pink sm:text-2xl">Lissy Amador · EduKids</p>
+          <img src="/portraits/edukids.png" alt="Logo de EduKids" className="h-[min(26vh,210px)] w-auto shrink-0" />
+        </div>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2">
           {LINKS.map((item) => {
             const Icon = item.icon

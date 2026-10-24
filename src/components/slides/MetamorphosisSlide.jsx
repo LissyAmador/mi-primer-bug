@@ -55,7 +55,13 @@ export function MetamorphosisSlide() {
               transition={{ duration: 0.35 }}
               className="w-full max-w-md"
             >
-              {stage === 0 && <Caterpillar />}
+              {stage === 0 && (
+                <img
+                  src="/portraits/oruga-morada.png?v=3"
+                  alt="Oruga morada"
+                  className="mx-auto max-h-[min(42vh,360px)] w-auto max-w-full rounded-[1.6rem] object-contain"
+                />
+              )}
               {stage === 1 && <Chrysalis />}
               {stage === 2 && <GlowButterfly lit className="mx-auto h-72 w-full" />}
             </motion.div>
@@ -101,21 +107,6 @@ export function MetamorphosisSlide() {
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/75">{current.support}</p>
       </div>
     </div>
-  )
-}
-
-function Caterpillar() {
-  const segments = [48, 96, 146, 196, 246]
-  return (
-    <svg viewBox="0 0 360 180" className="mx-auto h-44 w-full" role="img" aria-label="Oruga">
-      <line x1="20" y1="142" x2="340" y2="142" stroke="#FACC15" strokeOpacity="0.35" />
-      {segments.map((cx, index) => (
-        <ellipse key={cx} cx={cx} cy={index % 2 ? 96 : 104} rx="28" ry="22" fill={index % 2 ? '#A855F7' : '#6D28D9'} stroke="#FACC15" />
-      ))}
-      <ellipse cx="302" cy="96" rx="32" ry="26" fill="#EC4899" stroke="#FACC15" />
-      <circle cx="312" cy="90" r="2.4" fill="white" />
-      <circle cx="324" cy="88" r="2.4" fill="white" />
-    </svg>
   )
 }
 
