@@ -64,31 +64,12 @@ export function AwakeningSlide() {
             Toda persona que aprende algo nuevo comienza sin saberlo todo.
           </p>
         </div>
-        <LittleCaterpillar />
+        <img
+          src="/portraits/oruga-morada.png"
+          alt="Oruga morada"
+          className="h-[min(36vh,420px)] w-auto max-w-[42vw] shrink-0 rounded-[1.6rem] object-contain"
+        />
       </div>
-    </div>
-  )
-}
-
-function LittleCaterpillar() {
-  return (
-    <div className="hidden h-36 w-44 shrink-0 overflow-hidden rounded-3xl border border-white/10 bg-[#102418] sm:block">
-      <svg viewBox="0 0 220 160" className="h-full w-full" role="img" aria-label="Oruga morada sobre una hoja">
-        <ellipse cx="150" cy="132" rx="78" ry="18" fill="#166534" opacity="0.45" />
-        <path d="M8 126C70 108 130 118 214 96" fill="none" stroke="#22C55E" strokeWidth="7" strokeLinecap="round" />
-        <ellipse cx="62" cy="104" rx="20" ry="15" fill="#6D28D9" />
-        <ellipse cx="96" cy="96" rx="22" ry="16" fill="#7C3AED" />
-        <ellipse cx="130" cy="88" rx="24" ry="18" fill="#A855F7" />
-        <ellipse cx="162" cy="76" rx="28" ry="22" fill="#C084FC" />
-        <path d="M168 58C166 40 176 34 174 22" fill="none" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" />
-        <path d="M182 56C188 38 198 32 202 20" fill="none" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="172" cy="20" r="3" fill="#FACC15" />
-        <circle cx="204" cy="18" r="3" fill="#FACC15" />
-        <circle cx="170" cy="70" r="6" fill="white" />
-        <circle cx="186" cy="68" r="6" fill="white" />
-        <circle cx="172" cy="71" r="2.4" fill="#1A1024" />
-        <circle cx="188" cy="69" r="2.4" fill="#1A1024" />
-      </svg>
     </div>
   )
 }

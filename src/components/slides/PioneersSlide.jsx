@@ -22,18 +22,6 @@ const PEOPLE = [
       'Creó Python como un proyecto personal durante sus vacaciones de Navidad porque estaba frustrado con los lenguajes existentes. Al principio muchos no creían en su propuesta.',
     message: 'Las grandes herramientas que usamos hoy nacieron de alguien que solo quería resolver una frustración personal, sin saber que impactaría al planeta.',
   },
-  {
-    id: 'openai',
-    name: 'Sam Altman y Mira Murati',
-    role: 'Lideran la inteligencia artificial en OpenAI',
-    photos: [
-      { src: '/portraits/sam-altman.jpg', alt: 'Sam Altman', position: 'object-[center_25%]' },
-      { src: '/portraits/mira-murati.jpg', alt: 'Mira Murati', position: 'object-[72%_18%]' },
-    ],
-    story:
-      'Los primeros modelos de lenguaje cometían errores gigantescos, alucinaciones y bugs. Nadie lanzó un sistema perfecto desde el día uno.',
-    message: 'La inteligencia artificial de la primera charla del día no nació perfecta: necesitó miles de pruebas y errores para llegar a donde está.',
-  },
 ]
 
 export function PioneersSlide() {
@@ -93,7 +81,7 @@ export function PioneersSlide() {
         </motion.div>
       </AnimatePresence>
       <p className="mt-3 text-xs text-white/45">
-        Fotos: James S. Davis, Marina de EE. UU. (dominio público); Daniel Stroud (CC BY-SA 4.0); TechCrunch (CC BY 2.0); SWinxy (CC BY 4.0).
+        Fotos: James S. Davis, Marina de EE. UU. (dominio público); Daniel Stroud (CC BY-SA 4.0).
       </p>
     </div>
   )

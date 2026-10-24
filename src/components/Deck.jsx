@@ -11,6 +11,7 @@ import { MetamorphosisSlide } from './slides/MetamorphosisSlide'
 import { SimulatorSlide } from './slides/SimulatorSlide'
 import { RouteSlide } from './slides/RouteSlide'
 import { CloseSlide } from './slides/CloseSlide'
+import { ContactSlide } from './slides/ContactSlide'
 import { FeedbackSlide } from './slides/FeedbackSlide'
 
 const SLIDES = [
@@ -22,6 +23,7 @@ const SLIDES = [
   { id: 'simulador', Component: SimulatorSlide },
   { id: 'ruta', Component: RouteSlide },
   { id: 'cierre', Component: CloseSlide },
+  { id: 'contacto', Component: ContactSlide },
   { id: 'opinion', Component: FeedbackSlide },
 ]
 

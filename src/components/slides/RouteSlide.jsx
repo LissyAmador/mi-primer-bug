@@ -1,80 +1,58 @@
 'use client'
 
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { GraduationCap, Hammer, School, Users } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Compass, Hammer, Users } from 'lucide-react'
 
-const ROUTES = [
+const STEPS = [
   {
-    id: 'bach',
-    title: 'Bachillerato',
-    icon: School,
-    text: 'La curiosidad es más importante que el nombre de tu especialidad.',
-    step: 'Si tu colegio no tiene computación, igual puedes empezar con un proyecto propio.',
-  },
-  {
-    id: 'carrera',
-    title: 'Carrera universitaria',
-    icon: GraduationCap,
-    text: 'Ingeniería en Sistemas, Diseño UX, QA, Datos... Hay un lugar para cada talento.',
-    step: 'Programar es una herramienta, no el único destino. No tienes que encerrarte hoy.',
+    id: 'fundamentos',
+    number: '01',
+    title: 'No te cases con una sola tecnología',
+    icon: Compass,
+    text: 'Las herramientas cambian cada 6 meses. Los fundamentos de resolución de problemas duran para siempre.',
   },
   {
     id: 'proyectos',
-    title: 'Tus primeros proyectos',
+    number: '02',
+    title: 'Construye proyectos reales que te duelan',
     icon: Hammer,
-    text: 'Aprende construyendo pequeñas cosas reales, sin esperar a graduarte.',
-    step: 'Una página, un horario automático o un juego de una pantalla ya cuentan.',
+    text: 'No hagas el clásico «Hola Mundo». Crea herramientas que resuelvan problemas de tu comunidad, automatiza cosas de tu día a día o colabora en repositorios abiertos.',
   },
   {
     id: 'comunidad',
-    title: 'Comunidad',
+    number: '03',
+    title: 'Haz comunidad',
     icon: Users,
-    text: 'No camines sola; busca colectivos, mentores y eventos como Aurora STEAM GT.',
-    step: 'Compartir incluso este primer bug es una forma de entrar.',
+    text: 'El síndrome del impostor ataca más fuerte cuando estás solo frente a la pantalla. Rodéate de comunidades locales como Aurora STEAM GT, ve a meetups y comparte tus errores en público. Construir en comunidad acelera tu crecimiento ×10.',
   },
 ]
 
 export function RouteSlide() {
-  const [active, setActive] = useState('bach')
-  const selected = ROUTES.find((route) => route.id === active)
-
   return (
     <div className="flex h-full w-full flex-col justify-center px-8 pb-24 pt-8 md:px-14">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber">12 a 18 años</p>
-      <h2 className="mt-3 font-display text-4xl font-bold text-white sm:text-5xl">Tu ruta STEAM</h2>
-      <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {ROUTES.map((route) => {
-          const Icon = route.icon
-          const on = active === route.id
+      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber">Tu ruta</p>
+      <h2 className="mt-3 font-display text-4xl font-bold text-white sm:text-5xl">Primeros pasos</h2>
+      <div className="mt-6 grid min-h-0 gap-4 lg:grid-cols-3">
+        {STEPS.map((step, index) => {
+          const Icon = step.icon
           return (
-            <button
-              key={route.id}
-              type="button"
-              aria-pressed={on}
-              onClick={() => setActive(route.id)}
-              className={`rounded-[1.5rem] border p-4 text-left transition ${
-                on ? 'border-amber bg-amber/15' : 'border-white/15 bg-white/5 hover:border-pink/50'
-              }`}
+            <motion.article
+              key={step.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.08 }}
+              className="flex flex-col rounded-[1.6rem] border border-white/15 bg-white/5 p-5"
             >
-              <Icon className={on ? 'text-amber' : 'text-pink'} size={26} aria-hidden="true" />
-              <span className="mt-3 block font-display text-2xl font-bold text-white">{route.title}</span>
-              <span className="mt-2 block text-base leading-snug text-white/85">{route.text}</span>
-            </button>
+              <div className="flex items-center justify-between">
+                <Icon className="text-pink" size={28} aria-hidden="true" />
+                <span className="font-display text-sm font-bold tracking-[0.2em] text-amber">{step.number}</span>
+              </div>
+              <h3 className="mt-4 font-display text-2xl font-bold leading-tight text-white">{step.title}</h3>
+              <p className="mt-3 text-base leading-snug text-white/85 sm:text-lg">{step.text}</p>
+            </motion.article>
           )
         })}
       </div>
-      <AnimatePresence mode="wait">
-        <motion.p
-          key={selected.id}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -6 }}
-          className="mt-4 rounded-2xl border border-neon/40 bg-neon/15 px-5 py-3 text-lg text-white"
-        >
-          {selected.step}
-        </motion.p>
-      </AnimatePresence>
     </div>
   )
 }
