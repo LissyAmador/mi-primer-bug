@@ -11,6 +11,7 @@ import { MetamorphosisSlide } from './slides/MetamorphosisSlide'
 import { SimulatorSlide } from './slides/SimulatorSlide'
 import { RouteSlide } from './slides/RouteSlide'
 import { CloseSlide } from './slides/CloseSlide'
+import { FeedbackSlide } from './slides/FeedbackSlide'
 
 const SLIDES = [
   { id: 'hero', Component: HeroSlide },
@@ -21,6 +22,7 @@ const SLIDES = [
   { id: 'simulador', Component: SimulatorSlide },
   { id: 'ruta', Component: RouteSlide },
   { id: 'cierre', Component: CloseSlide },
+  { id: 'opinion', Component: FeedbackSlide },
 ]
 
 export function Deck() {
