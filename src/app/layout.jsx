@@ -14,7 +14,7 @@ const sans = Plus_Jakarta_Sans({
 })
 
 export const metadata = {
-  title: 'Creando tu primer BUG · Aurora STEAM GT',
+  title: 'Superando tu primer Bug · Aurora STEAM GT',
   description: 'De la duda a la luz: tu metamorfosis en la tecnología. Taller de Aurora STEAM GT.',
 }
 

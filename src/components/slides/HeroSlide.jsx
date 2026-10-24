@@ -15,20 +15,18 @@ const SPECKS = Array.from({ length: 16 }, (_, index) => ({
 export function HeroSlide() {
   return (
     <div className="grid h-full w-full items-center gap-6 px-8 pb-24 pt-8 md:px-14 lg:grid-cols-[1.15fr_0.85fr]">
-      <div>
+      <div className="relative z-10">
         <p className="inline-flex rounded-full border border-pink/50 bg-pink/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-amber">
           Aurora STEAM GT • CCE Guatemala
         </p>
-        <h1 className="mt-6 max-w-4xl font-display text-balance text-4xl font-bold leading-[0.95] text-white sm:text-5xl lg:text-6xl">
-          Creando tu primer <span className="text-glow text-amber">BUG</span>
-          <span className="mt-2 block text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
-            y descubriendo tu propio camino
-          </span>
+        <h1 className="mt-6 max-w-4xl font-display text-balance text-5xl font-bold leading-[0.92] text-white sm:text-6xl">
+          Superando tu primer <span className="text-glow text-amber">Bug</span>
+          <span className="mt-2 block">y descubriendo tu propio camino.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-pretty text-xl leading-relaxed text-white/85 sm:text-2xl">
-          De la duda a la luz: Tu metamorfosis en la tecnología
+        <p className="mt-5 max-w-2xl text-pretty text-lg font-medium leading-snug text-white/70 sm:text-xl">
+          De la duda a la luz: tu metamorfosis en la tecnología
         </p>
-        <p className="mt-8 text-lg font-medium tracking-wide text-pink">Lissy Amador</p>
+        <p className="mt-6 text-lg font-medium tracking-wide text-pink">Lissy Amador</p>
       </div>
       <div className="relative mx-auto h-[min(52vh,420px)] w-full max-w-lg">
         {SPECKS.map((speck) => (

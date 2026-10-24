@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2 } from 'lucide-react'
 import { HeroSlide } from './slides/HeroSlide'
 import { MythSlide } from './slides/MythSlide'
+import { PioneersSlide } from './slides/PioneersSlide'
+import { AwakeningSlide } from './slides/AwakeningSlide'
 import { MetamorphosisSlide } from './slides/MetamorphosisSlide'
 import { SimulatorSlide } from './slides/SimulatorSlide'
 import { RouteSlide } from './slides/RouteSlide'
@@ -13,6 +15,8 @@ import { CloseSlide } from './slides/CloseSlide'
 const SLIDES = [
   { id: 'hero', Component: HeroSlide },
   { id: 'mito', Component: MythSlide },
+  { id: 'referentes', Component: PioneersSlide },
+  { id: 'despertar', Component: AwakeningSlide },
   { id: 'metamorfosis', Component: MetamorphosisSlide },
   { id: 'simulador', Component: SimulatorSlide },
   { id: 'ruta', Component: RouteSlide },
